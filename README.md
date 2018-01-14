@@ -27,6 +27,7 @@ ResNet model or WRN model
 from resnet_cifar import create_ResNet
 
 resnet = create_ResNet(
+
                         nb_classes = 10,
                         
                         img_dim = (32, 32, 3),
