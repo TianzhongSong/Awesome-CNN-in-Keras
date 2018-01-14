@@ -62,7 +62,7 @@ def create_ResNet(nb_classes, img_dim, nb_blocks=[4,4,4],k=1,
     x = BatchNormalization(axis=-1, epsilon=1.1e-5)(y)
     x = Activation('relu')(x)
 
-    # group 1
+    # stage 1
     x = residual_block(x,stack[0],dropout_rate=droprate)
     if stack[0] != 16:
         y = Conv2D(stack[0], (1, 1),
@@ -80,7 +80,7 @@ def create_ResNet(nb_classes, img_dim, nb_blocks=[4,4,4],k=1,
         if droprate:
             y = Dropout(droprate)(y)
 
-    # group 2
+    # stage 2
     x = BatchNormalization(axis=-1, epsilon=1.1e-5)(y)
     y = Activation('relu')(x)
 
@@ -99,7 +99,7 @@ def create_ResNet(nb_classes, img_dim, nb_blocks=[4,4,4],k=1,
 
         y = add([x, y])
 
-    # group 3
+    # stage 3
     x = BatchNormalization(axis=-1, epsilon=1.1e-5)(y)
     y = Activation('relu')(x)
 
