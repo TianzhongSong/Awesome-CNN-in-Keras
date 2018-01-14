@@ -20,7 +20,7 @@ weight_decay: weight decay for L2 regularization
 
 droprate: the dropout between two convolutons of each block is added and the default drop rate is set to 0.0
 
-ResNet model or WRN model
+return: ResNet model or WRN model
 
 ##### This is an example for ResNet-110:
 
