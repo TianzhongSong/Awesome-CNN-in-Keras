@@ -5,7 +5,7 @@ Implement awesome CNNs with Keras
 Keras2.1.0+, Tensorflow1.4+
 
 ## files
-1.ResNet.py
+1.resnet_cifar.py
 #### usage
 
 nb_classes: the number of your dataset classes, for cifar-10, nb_classes should be 10
