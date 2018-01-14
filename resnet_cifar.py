@@ -77,8 +77,6 @@ def create_ResNet(nb_classes, img_dim, nb_blocks=[4,4,4],k=1,
         x = residual_block(x, stack[0],dropout_rate=droprate)
 
         y = add([x,y])
-        if droprate:
-            y = Dropout(droprate)(y)
 
     # stage 2
     x = BatchNormalization(axis=-1, epsilon=1.1e-5)(y)
