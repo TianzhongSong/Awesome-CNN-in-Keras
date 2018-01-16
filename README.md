@@ -12,7 +12,7 @@ nb_classes: the number of your dataset classes, for cifar-10, nb_classes should 
 
 img_dim: the input shape of the model input
 
-nb_blocks: the number of blocks in each stage
+nb_blocks: the number of blocks in each stage,the depth of the model = 2 + 2 x (nb_blocks[0] + nb_blocks[1] + nb_blocks[2])
 
 k: the widen fatcor, k=1 indicates that the model is original ResNet, when k>1 the model is a wide ResNet
 
